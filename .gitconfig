@@ -1,0 +1,54 @@
+[user]
+    name = keithcorbettatintuitive
+    email = keith.corbett@intuitive.ai
+
+[core]
+    pager = less -FRSX
+
+[color]
+    ui = auto
+
+[core]
+    whitespace = trailing-space,space-before-tab
+    autocrlf = input
+        
+[diff]
+    colorMoved = default
+
+[merge]
+    conflictstyle = diff3
+
+[pull]
+    rebase = true
+
+[push]
+    default = current
+    autosetupremote = true
+
+[help]
+    autocorrect = 1
+
+[alias]
+    # status shortcuts
+    s = status -sb
+    st = status
+
+    # branch navigation
+    co = checkout
+    cob = checkout -b
+    br = branch
+
+    # commits
+    ci = commit
+    ca = commit --amend
+
+    # logs
+    lg = log --oneline --graph --decorate --all
+    last = log -1 HEAD
+
+    # diffs
+    df = diff
+    dfn = diff --name-only
+
+    # quick diff workflow using Codespace editor
+    wdiff = !"git diff > diffs && code diffs"
